@@ -23,4 +23,4 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 ## License
 
-[ISC](LICENSE) © 2019 Pedro Pombeiro <pombeirp@users.noreply.github.com> (https://github.com/status-im/deps-lock-snitch-bot)
+[ISC](LICENSE) © 2019 Status.im <pombeirp@users.noreply.github.com> (https://github.com/status-im/deps-lock-snitch-bot)

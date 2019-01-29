@@ -7,7 +7,7 @@ interface Config {
 }
 
 export = (app: Application) => {
-  app.on(['pull_request.opened', 'pull_request.edited'], (context: Context) => {
+  app.on(['pull_request.opened', 'pull_request.edited', 'pull_request.synchronize'], (context: Context) => {
     return handlePullRequest(context)
   })
   // For more information on building apps:
@@ -18,8 +18,7 @@ export = (app: Application) => {
 }
 
 async function handlePullRequest(context: Context) {
-  const { github, payload } = context
-  const { pull_request } = payload
+  const { github, payload, payload: { pull_request } } = context
 
   const lockFiles: string[] = []
   await github.paginate(
