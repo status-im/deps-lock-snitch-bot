@@ -53,7 +53,8 @@
     "postinstall": "yarn build",
     "start": "probot run ./lib/index.js",
     "test": "jest && tsc -p tsconfig.json",
-    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage",
+    "logs": "ssh dokku.status.im tail -n 100 -f /var/log/docker/deps-lock-snitch-bot.web.1/docker.log"
   },
   "version": "1.0.0"
 }
